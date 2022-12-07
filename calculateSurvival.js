@@ -1,5 +1,5 @@
 function calculateSurvival() {
-  // Hard-code LPM coefficients from R program (not the best way to do it, but we're strapped for time)
+  // Hard-code LPM coefficients from previously trained model (not the best way to do it, but we're strapped for time)
   console.log("execute calculateSurvival.js");
 
   // Get HTML element IDs (need these to access or modify the elements)
@@ -23,7 +23,7 @@ function calculateSurvival() {
   survival = ((survival < 0) ? 0 : survival);
   survival = ((survival > 1) ? 1 : survival);
 
-  // Classification threshold 0.618 (in the dataset, 61.8% of passengers survived)
+  // Classification threshold 0.4163379 (mean predicted probability)
   if (survival >= 0.4163379) {
     header.textContent = "You survived! :)"
     message.textContent = "Your probability of survival was " + (survival*100).toFixed(2) + "%. Looks like Lady Luck was smiling upon you as you embarked on your journey. At the very least, you'll have a story for the ages! Although I would look into some therapy sessions to treat any mental trauma this experience might have caused you. We hope you sail with us again soon!"
@@ -31,5 +31,4 @@ function calculateSurvival() {
     header.textContent = "Oh no! You died! :(";
     message.textContent = "Your probability of survival was " + (survival*100).toFixed(2) + "%. It appears the odds were not in your favor. Oh, wait! There's a boat over there! If you swim fast enough you might make it! Oops, looks like it just Charon. Hopping from one boat to the next, huh? You know, the lower your passenger class the lower your cabin on deck. That's a lot of stairs! Welp, toodaloo!"
   }
-
 };
