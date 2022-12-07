@@ -11,9 +11,9 @@ var classDistribution = {
       "type": "bar",
       "xsrc": "jlaurin8:41:cadd3a",
       "x": [
-        "Class 1",
-        "Class 2",
-        "Class 3"
+        "First Class",
+        "Second Class",
+        "Third Class (Steerage)"
       ],
       "ysrc": "jlaurin8:41:9d5e54",
       "y": [
