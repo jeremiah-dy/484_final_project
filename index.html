@@ -23,28 +23,28 @@
 
   <div style="width: 100%; height: 100%;"
        id="LPMcontainer"
-       data-firstclass="false"
-       data-secondclass="false"
-       data-sex="female"
-       data-age="0"
+       data-firstclass="true"
+       data-secondclass="true"
+       data-sex="NA"
+       data-age="1000"
        data-survivalprob="0">
-    <img src="first-class.jpeg" alt="Ship PNG determined by class variable" class="ui centered image" id="shipImage"
+    <img src="default-ship.jpeg" alt="Ship PNG determined by class variable" class="ui centered image" id="shipImage"
     style="padding-bottom: 2%; height: 75%; width: 75%;">
     <script src="changeClass.js"></script>
     <script src="changeSex.js"></script>
     <script src="changeAge.js"></script>
     <script src="calculateSurvival.js"></script>
     <div style="float:left; width: 40%; text-align: center;" id="inputsDiv">
-      <h2 id="currentSex">Sex: Male</h2>
+      <h2 id="currentSex">Sex: </h2>
       <button id="maleButton" onClick="changeSex(this);">Male</button>
       <button id="femaleButton" onClick="changeSex(this);">Female</button>
       <br><br>
-      <h2 id="currentAge">Age: 0</h2>
+      <h2 id="currentAge">Age: </h2>
       <input id="ageSlider" oninput="changeAge(this);" type="range" min="0" max="100" value="50">
       <br>
       <input id="ageInputBox" onkeyup="changeAge(this);" value="0">
       <br><br>
-      <h2 id="currentClass">Passenger Class: First Class</h2>
+      <h2 id="currentClass">Passenger Class: </h2>
       <button id="firstClassButton" onClick="changeClass(this);">First Class</button>
       <button id="secondClassButton" onClick="changeClass(this);">Second Class</button>
       <button id="thirdClassButton" onClick="changeClass(this);">Third Class</button>

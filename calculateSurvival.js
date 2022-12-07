@@ -14,6 +14,21 @@ function calculateSurvival() {
   let firstClass = ((LPMcontainer.dataset.firstclass == "true") ? 1 : 0);
   let secondClass = ((LPMcontainer.dataset.secondclass == "true") ? 1 : 0);
 
+  // Check for valid input
+  if (LPMcontainer.dataset.sex == "NA") {
+    header.textContent = "Hold up!";
+    message.textContent = "Please select your sex before using the LPM!";
+    return;
+  } else if (age == 1000) {
+    header.textContent = "Hold up!";
+    message.textContent = "Please select an age before using the LPM!";
+    return;
+  } else if ((firstClass == 1) && (secondClass == 1)) {
+    header.textContent = "Hold up!";
+    message.textContent = "Please select a passenger class before using the LPM!";
+    return;
+  }
+
   // Calculate survivability
   let survival = 0.256 + (0.486 * sex) + (-0.006 * age) +
     (0.379 * firstClass) + (0.167 * secondClass);
