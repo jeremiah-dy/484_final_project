@@ -12,7 +12,7 @@
   <script src="plotly-latest.min.js"></script>
 </head>
 
-<body>
+<body style="padding-bottom: 50px">
   <h1 style="font-size: xxx-large; text-align: center;">ICS 484 Titanic Survivability Calculator</h1>
 
   <div class="stretched">
@@ -20,7 +20,6 @@
     from the Titanic's unfortunate sinking in April 1912 to determine whether or not you would have lived! Simply enter
       your age, sex, and your desired passenger class to start! Will you survive? Find out now!</p>
   </div>
-
 
   <div style="width: 100%; height: 100%;"
        id="LPMcontainer"
@@ -35,7 +34,7 @@
     <script src="changeSex.js"></script>
     <script src="changeAge.js"></script>
     <script src="calculateSurvival.js"></script>
-    <div style="padding-left: 100px; float:left; width: 50%; text-align: center;" id="inputsDiv">
+    <div style="float:left; width: 40%; text-align: center;" id="inputsDiv">
       <h2 id="currentSex">Sex: Male</h2>
       <button id="maleButton" onClick="changeSex(this);">Male</button>
       <button id="femaleButton" onClick="changeSex(this);">Female</button>
@@ -50,11 +49,43 @@
       <button id="secondClassButton" onClick="changeClass(this);">Second Class</button>
       <button id="thirdClassButton" onClick="changeClass(this);">Third Class</button>
     </div>
-    <div style="padding-left: 100px; float:right; width: 50%; text-align: center;" id="buttonDiv">
+    <div style="float:right; width: 60%; text-align: center;" id="outputDiv">
       <h2 id="survived!">Do you have what it takes to survive the sinking Titanic?</h2>
       <p id="survivalMessage" style="height:200px; font-size: 16pt"></p>
       <button id="calculateSurvivalButton" onClick="calculateSurvival();" style="width:75%; height: 50px;">Go!</button>
     </div>
   </div>
+  <br><br><br>
+<div style="width: 100%; height: 100%; padding-top: 300px;" id="chartsDiv">
+  <h1 style="font-size: xxx-large; text-align: center;">Summary Statistics</h1>
+
+  <div id="ageDistribution"></div>
+  <p style="font-size: large">This histogram displays the distribution of ages across passengers onboard the Titanic.</p>
+  <div id="ageGraph"></div>
+  <p style="font-size: large">This histogram displays the distribution of passengers who survived the Titanic across age bins of width 10 (years).</p>
+  <div id="classDistribution"></div>
+  <p style="font-size: large">This histogram displays the distribution of passenger class across passengers onboard the Titanic.</p>
+  <div style="width: 100%; height: 100%; padding-bottom: 500px">
+    <div style="width:50%; float: left;">
+      <div id="genderPieChart" ></div>
+      <p style="font-size: medium">This pie chart displays the distribution of sex across passengers onboard the Titanic.</p>
+    </div>
+    <div style="width:50%; float: right;">
+      <div id="surviveOrNot" ></div>
+      <p style="font-size: medium">This pie chart displays the distribution of survival across passengers onboard the Titanic.</p>
+    </div>
+  </div>
+  <div id="genderClassSurvival"></div>
+  <p style="font-size: large">This histogram displays the distribution of survival across passengers through the intersection of class and sex onboard the Titanic.</p>
+  <div id="passengerClassSurvival"></div>
+  <p style="font-size: large; padding-bottom: 75px;">This stacked bar chart displays the distribution of survival across passengers by class onboard the Titanic.</p>
+  <script src="ageDistribution.js"></script>
+  <script src="ageGraph.js"></script>
+  <script src="classDistribution.js"></script>
+  <script src="genderClassSurvival.js"></script>
+  <script src="genderPieChart.js"></script>
+  <script src="passengerClassSurvival.js"></script>
+  <script src="surviveOrNot.js"></script>
+</div>
 </body>
 </html>
