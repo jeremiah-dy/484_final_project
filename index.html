@@ -28,8 +28,7 @@
        data-secondclass="false"
        data-sex="female"
        data-age="0"
-       data-survivalprob="0"
-       data-attempts="0">
+       data-survivalprob="0">
     <img src="first-class.jpeg" alt="Ship PNG determined by class variable" class="ui centered image" id="shipImage"
     style="padding-bottom: 50px">
     <script src="changeClass.js"></script>
@@ -52,8 +51,9 @@
       <button id="thirdClassButton" onClick="changeClass(this);">Third Class</button>
     </div>
     <div style="padding-left: 100px; float:right; width: 50%; text-align: center;" id="buttonDiv">
-      <h2 id="survived!"></h2>
-      <button id="calculateSurvivalButton" onClick="calculateSurvival();">Go!</button>
+      <h2 id="survived!">Do you have what it takes to survive the sinking Titanic?</h2>
+      <p id="survivalMessage" style="height:200px; font-size: 16pt"></p>
+      <button id="calculateSurvivalButton" onClick="calculateSurvival();" style="width:75%; height: 50px;">Go!</button>
     </div>
   </div>
 </body>
