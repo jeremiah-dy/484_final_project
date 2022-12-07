@@ -12,7 +12,7 @@
   <script src="plotly-latest.min.js"></script>
 </head>
 
-<body style="padding-bottom: 50px">
+<body>
   <h1 style="font-size: xxx-large; text-align: center;">ICS 484 Titanic Survivability Calculator</h1>
 
   <div class="stretched">
@@ -51,12 +51,12 @@
     </div>
     <div style="float:right; width: 60%; text-align: center;" id="outputDiv">
       <h2 id="survived!">Do you have what it takes to survive the sinking Titanic?</h2>
-      <p id="survivalMessage" style="height:200px; font-size: 16pt"></p>
+      <p id="survivalMessage" style="height:60%; font-size: 16pt"></p>
       <button id="calculateSurvivalButton" onClick="calculateSurvival();" style="width:75%; height: 50px;">Go!</button>
     </div>
   </div>
   <br><br><br>
-<div style="width: 100%; height: 100%; padding-top: 300px;" id="chartsDiv">
+<div style="width: 100%; height: 100%; padding-top: 15%;" id="chartsDiv">
   <h1 style="font-size: xxx-large; text-align: center;">Summary Statistics</h1>
 
   <div id="ageDistribution"></div>
@@ -65,7 +65,7 @@
   <p style="font-size: large">This histogram displays the distribution of passengers who survived the Titanic across age bins of width 10 (years).</p>
   <div id="classDistribution"></div>
   <p style="font-size: large">This histogram displays the distribution of passenger class across passengers onboard the Titanic.</p>
-  <div style="width: 100%; height: 100%; padding-bottom: 500px">
+  <div style="width: 100%; height: 100%; padding-bottom: 10%">
     <div style="width:50%; float: left;">
       <div id="genderPieChart" ></div>
       <p style="font-size: medium">This pie chart displays the distribution of sex across passengers onboard the Titanic.</p>
@@ -78,7 +78,7 @@
   <div id="genderClassSurvival"></div>
   <p style="font-size: large">This histogram displays the distribution of survival across passengers through the intersection of class and sex onboard the Titanic.</p>
   <div id="passengerClassSurvival"></div>
-  <p style="font-size: large; padding-bottom: 75px;">This stacked bar chart displays the distribution of survival across passengers by class onboard the Titanic.</p>
+  <p style="font-size: large; padding-bottom: 10%;">This stacked bar chart displays the distribution of survival across passengers by class onboard the Titanic.</p>
   <script src="ageDistribution.js"></script>
   <script src="ageGraph.js"></script>
   <script src="classDistribution.js"></script>
@@ -87,10 +87,10 @@
   <script src="passengerClassSurvival.js"></script>
   <script src="surviveOrNot.js"></script>
 </div>
-  <div style="text-align: center">
+  <div style="text-align: center; padding-top: 180%;">
     <br>
-    <br>
-    <img src="rough-sketch.jpeg" alt="Rough Draft Sketch of site layout." style="height: 50%; width:50%; padding-top: 1100px">
+    <h1 style="font-size: xxx-large; text-align: center;">BTS: Rough Sketch</h1>
+    <img src="rough-sketch.jpeg" alt="Rough Draft Sketch of site layout." style="height: 50%; width:50%;">
   </div>
 </body>
 </html>
